@@ -24,6 +24,10 @@ default: &default
 development:
   <<: *default
   database: complete_journal_backend_development
+  # username: test
+  # password: test
+  # host: localhost
+  # port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -81,6 +85,4 @@ test:
 #
 production:
   <<: *default
-  database: complete_journal_backend_production
-  username: complete_journal_backend
-  password: <%= ENV['COMPLETE_JOURNAL_BACKEND_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

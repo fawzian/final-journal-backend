@@ -7,3 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.create(username: "test", password: "test", age: 24)
+
+
+# entry = Entry.create(title: "seed title", body: "seed body")
